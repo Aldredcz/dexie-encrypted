@@ -63,7 +63,7 @@ export function encryptEntity<T extends Dexie.Table>(
     }
 
     // @ts-ignore
-    dataToStore.__encryptedData = performEncryption(encryptionKey, entity, nonceOverride);
+    dataToStore.__encryptedData = performEncryption(encryptionKey, toEncrypt, nonceOverride);
     return dataToStore;
 }
 
